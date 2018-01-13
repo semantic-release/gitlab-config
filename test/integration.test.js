@@ -35,6 +35,11 @@ test.beforeEach(async t => {
   t.context.stdout = stub(process.stdout, 'write').callsFake(val => {
     t.context.logs += stripAnsi(val.toString());
   });
+
+  process.env.TRAVIS = 'true';
+  process.env.CI = 'true';
+  process.env.TRAVIS_BRANCH = 'master';
+  process.env.TRAVIS_PULL_REQUEST = 'false';
 });
 
 test.afterEach.always(t => {
