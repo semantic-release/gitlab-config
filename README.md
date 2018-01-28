@@ -6,6 +6,9 @@
 [![Codecov](https://img.shields.io/codecov/c/github/semantic-release/gitlab-config.svg)](https://codecov.io/gh/semantic-release/gitlab-config)
 [![Greenkeeper badge](https://badges.greenkeeper.io/semantic-release/gitlab-config.svg)](https://greenkeeper.io/)
 
+[![npm latest version](https://img.shields.io/npm/v/@semantic-release/gitlab-config/latest.svg)](https://www.npmjs.com/package/@semantic-release/gitlab-config)
+[![npm next version](https://img.shields.io/npm/v/@semantic-release/gitlab-config/next.svg)](https://www.npmjs.com/package/@semantic-release/gitlab-config)
+
 ## Usage
 
 ### Local installation
