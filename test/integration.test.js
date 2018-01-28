@@ -6,7 +6,8 @@ import stripAnsi from 'strip-ansi';
 import semanticRelease from 'semantic-release';
 import mockServer from './helpers/mockserver';
 import npmRegistry from './helpers/npm-registry';
-import {gitRepo, gitCommit} from './helpers/git-utils';
+import gitbox from './helpers/gitbox';
+import {gitCommit} from './helpers/git-utils';
 
 /* eslint camelcase: ["error", {properties: "never"}] */
 
@@ -20,16 +21,15 @@ stub(process.stderr, 'write');
 const gitlabConfig = require.resolve('..');
 
 test.before(async () => {
+  // Start the local Git server
+  await gitbox.start();
   // Start Mock Server
   await mockServer.start();
   // Start the local NPM registry
   await npmRegistry.start();
 });
 
-test.beforeEach(async t => {
-  // Create a git repository, set the current working directory at the root of the repo
-  await gitRepo();
-  await gitCommit('Initial commit');
+test.beforeEach(t => {
   Object.assign(process.env, npmRegistry.authEnv);
   t.context.logs = '';
   t.context.stdout = stub(process.stdout, 'write').callsFake(val => {
@@ -51,8 +51,8 @@ test.afterEach.always(t => {
 });
 
 test.after.always(async () => {
-  // // Stop the local Git server
-  // await gitbox.stop();
+  // Stop the local Git server
+  await gitbox.stop();
   // Stop Mock Server
   await mockServer.stop();
   // Stop the local NPM registry
@@ -61,7 +61,10 @@ test.after.always(async () => {
 
 test.serial('Initial and minor releases', async t => {
   const packageName = 'test-release';
-  const owner = 'owner';
+  const owner = 'git';
+  // Create a remote repo, initialize it, create a local shallow clone and set the cwd to the clone
+  const {repositoryUrl} = await gitbox.createRepo(packageName);
+  process.env.GIT_CREDENTIALS = gitbox.gitCredential;
   process.env.GL_TOKEN = 'gitlab_token';
   process.env.GITLAB_URL = mockServer.url;
   process.env.GITLAB_PREFIX = '';
@@ -70,7 +73,7 @@ test.serial('Initial and minor releases', async t => {
     name: packageName,
     version: '0.0.0-dev',
     publishConfig: {registry: npmRegistry.url},
-    repository: {url: `https://gitlab.com/${owner}/${packageName}`},
+    repository: {url: repositoryUrl},
   });
 
   /* Initial release */
@@ -80,15 +83,10 @@ test.serial('Initial and minor releases', async t => {
     {},
     {body: {permissions: {project_access: {access_level: 30}}}, method: 'GET'}
   );
-  let getRefMock = await mockServer.mock(
-    `/projects/${owner}%2F${packageName}/repository/tags/v${version}`,
-    {},
-    {body: {}, statusCode: 404, method: 'GET'}
-  );
   let createReleaseMock = await mockServer.mock(
     `/projects/${owner}%2F${packageName}/repository/tags/v${version}/release`,
     {body: {tag_name: `v${version}`}},
-    {body: {}}
+    {body: {}, method: 'PUT'}
   );
   t.log('Commit a feature');
   await gitCommit('feat: new feature');
@@ -97,7 +95,6 @@ test.serial('Initial and minor releases', async t => {
   await semanticRelease({extends: gitlabConfig});
 
   await mockServer.verify(verifyGitLabMock);
-  await mockServer.verify(getRefMock);
   await mockServer.verify(createReleaseMock);
   t.regex(t.context.logs, /Publishing version 1\.0\.0 to npm registry/);
   t.regex(t.context.logs, /Published GitLab release: v1\.0\.0/);
@@ -110,15 +107,10 @@ test.serial('Initial and minor releases', async t => {
     {},
     {body: {permissions: {project_access: {access_level: 30}}}, method: 'GET'}
   );
-  getRefMock = await mockServer.mock(
-    `/projects/${owner}%2F${packageName}/repository/tags/v${version}`,
-    {},
-    {body: {}, statusCode: 200, method: 'GET'}
-  );
   createReleaseMock = await mockServer.mock(
     `/projects/${owner}%2F${packageName}/repository/tags/v${version}/release`,
     {body: {tag_name: `v${version}`}},
-    {body: {}}
+    {body: {}, method: 'PUT'}
   );
   t.log('Commit a feature');
   await execa('git', ['commit', '-m', 'feat: other feature', '--allow-empty', '--no-gpg-sign']);
@@ -127,7 +119,6 @@ test.serial('Initial and minor releases', async t => {
   await semanticRelease({extends: gitlabConfig});
 
   await mockServer.verify(verifyGitLabMock);
-  await mockServer.verify(getRefMock);
   await mockServer.verify(createReleaseMock);
   t.regex(t.context.logs, /Publishing version 1\.1\.0 to npm registry/);
   t.regex(t.context.logs, /Published GitLab release: v1\.1\.0/);
