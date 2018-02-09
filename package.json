@@ -16,7 +16,7 @@
     "Gregor Martynus (https://twitter.com/gr2m)"
   ],
   "dependencies": {
-    "@semantic-release/gitlab": "^2.0.0",
+    "@semantic-release/gitlab": "^2.0.2",
     "@semantic-release/npm": "^3.0.0"
   },
   "devDependencies": {
