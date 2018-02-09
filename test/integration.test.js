@@ -86,7 +86,7 @@ test.serial('Initial and minor releases', async t => {
   let createReleaseMock = await mockServer.mock(
     `/projects/${owner}%2F${packageName}/repository/tags/v${version}/release`,
     {body: {tag_name: `v${version}`}},
-    {body: {}, method: 'PUT'}
+    {body: {}, method: 'POST'}
   );
   t.log('Commit a feature');
   await gitCommit('feat: new feature');
@@ -110,7 +110,7 @@ test.serial('Initial and minor releases', async t => {
   createReleaseMock = await mockServer.mock(
     `/projects/${owner}%2F${packageName}/repository/tags/v${version}/release`,
     {body: {tag_name: `v${version}`}},
-    {body: {}, method: 'PUT'}
+    {body: {}, method: 'POST'}
   );
   t.log('Commit a feature');
   await execa('git', ['commit', '-m', 'feat: other feature', '--allow-empty', '--no-gpg-sign']);
