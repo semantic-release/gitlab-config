@@ -51,6 +51,7 @@ export async function gitCommit(message) {
  * The shallow will contain a limited number of commit and no tags.
  *
  * @param {String} origin The path of the repository to clone.
+ * @param {String} [branch='master'] The branch to clone.
  * @param {Number} [depth=1] The number of commit to clone.
  * @return {String} The path of the cloned repository.
  */
