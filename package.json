@@ -16,8 +16,8 @@
     "Gregor Martynus (https://twitter.com/gr2m)"
   ],
   "dependencies": {
-    "@semantic-release/gitlab": "^2.1.2",
-    "@semantic-release/npm": "^3.2.0"
+    "@semantic-release/gitlab": "^3.0.0",
+    "@semantic-release/npm": "^4.0.0"
   },
   "devDependencies": {
     "ava": "^0.25.0",
@@ -34,7 +34,7 @@
     "mockserver-client": "^5.3.0",
     "nyc": "^12.0.1",
     "p-retry": "^2.0.0",
-    "semantic-release": "^15.0.0",
+    "semantic-release": "^15.8.0",
     "sinon": "^6.0.0",
     "strip-ansi": "^4.0.0",
     "tempy": "^0.2.1",
@@ -69,7 +69,7 @@
     "all": true
   },
   "peerDependencies": {
-    "semantic-release": ">=15.0.0 <16.0.0"
+    "semantic-release": ">=15.8.0 <16.0.0"
   },
   "prettier": {
     "printWidth": 120,
