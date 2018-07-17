@@ -27,7 +27,7 @@
     "delay": "^3.0.0",
     "dockerode": "^2.5.3",
     "execa": "^0.10.0",
-    "fs-extra": "^6.0.0",
+    "fs-extra": "^7.0.0",
     "get-stream": "^3.0.0",
     "git-log-parser": "^1.2.0",
     "got": "^8.0.1",
