@@ -17,7 +17,7 @@
   ],
   "dependencies": {
     "@semantic-release/gitlab": "^3.0.0",
-    "@semantic-release/npm": "^4.0.0"
+    "@semantic-release/npm": "^5.0.0"
   },
   "devDependencies": {
     "ava": "^0.25.0",
