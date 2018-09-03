@@ -24,7 +24,7 @@
     "codecov": "^3.0.0",
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.0.0",
-    "delay": "^3.0.0",
+    "delay": "^4.0.0",
     "dockerode": "^2.5.3",
     "execa": "^1.0.0",
     "fs-extra": "^7.0.0",
