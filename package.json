@@ -36,7 +36,7 @@
     "p-retry": "^2.0.0",
     "semantic-release": "^15.8.0",
     "sinon": "^6.0.0",
-    "strip-ansi": "^4.0.0",
+    "strip-ansi": "^5.0.0",
     "tempy": "^0.2.1",
     "xo": "^0.23.0"
   },
