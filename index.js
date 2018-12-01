@@ -1,7 +1,8 @@
 module.exports = {
-  verifyConditions: ['@semantic-release/npm', '@semantic-release/gitlab'],
-  prepare: ['@semantic-release/npm'],
-  publish: ['@semantic-release/npm', '@semantic-release/gitlab'],
-  success: false,
-  fail: false,
+  plugins: [
+    '@semantic-release/commit-analyzer',
+    '@semantic-release/release-notes-generator',
+    '@semantic-release/npm',
+    '@semantic-release/gitlab',
+  ],
 };
