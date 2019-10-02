@@ -12,7 +12,7 @@
   ],
   "dependencies": {
     "@semantic-release/commit-analyzer": "^6.1.0",
-    "@semantic-release/gitlab": "^3.1.0",
+    "@semantic-release/gitlab": "^4.0.0",
     "@semantic-release/npm": "^5.1.1",
     "@semantic-release/release-notes-generator": "^7.1.4"
   },
