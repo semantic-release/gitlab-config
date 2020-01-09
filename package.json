@@ -11,7 +11,7 @@
     "Gregor Martynus (https://twitter.com/gr2m)"
   ],
   "dependencies": {
-    "@semantic-release/commit-analyzer": "^6.1.0",
+    "@semantic-release/commit-analyzer": "^7.0.0",
     "@semantic-release/gitlab": "^4.0.0",
     "@semantic-release/npm": "^5.1.1",
     "@semantic-release/release-notes-generator": "^7.1.4"
