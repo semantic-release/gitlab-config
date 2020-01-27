@@ -17,7 +17,7 @@
     "@semantic-release/release-notes-generator": "^7.1.4"
   },
   "devDependencies": {
-    "semantic-release": "^16.0.0",
+    "semantic-release": "^17.0.0",
     "xo": "^0.25.0"
   },
   "engines": {
@@ -38,7 +38,7 @@
   "license": "MIT",
   "main": "index.js",
   "peerDependencies": {
-    "semantic-release": ">=15.10.0 <17.0.0"
+    "semantic-release": ">=15.10.0 <18.0.0"
   },
   "prettier": {
     "printWidth": 120,
