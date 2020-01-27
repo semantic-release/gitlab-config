@@ -13,7 +13,7 @@
   "dependencies": {
     "@semantic-release/commit-analyzer": "^7.0.0",
     "@semantic-release/gitlab": "^5.0.0",
-    "@semantic-release/npm": "^6.0.0",
+    "@semantic-release/npm": "^7.0.0",
     "@semantic-release/release-notes-generator": "^7.1.4"
   },
   "devDependencies": {
