@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "semantic-release": "^17.0.0",
-    "xo": "^0.27.0"
+    "xo": "^0.28.0"
   },
   "engines": {
     "node": ">=10.18"
@@ -57,6 +57,9 @@
   },
   "xo": {
     "prettier": true,
-    "space": true
+    "space": true,
+    "rules": {
+      "unicorn/string-content": "off"
+    }
   }
 }
