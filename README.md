@@ -2,15 +2,13 @@
 
 [**semantic-release**](https://github.com/semantic-release/semantic-release) shareable config to publish npm packages with [GitLab](https://gitlab.com).
 
-[![Travis](https://img.shields.io/travis/semantic-release/gitlab-config.svg)](https://travis-ci.org/semantic-release/gitlab-config)
-[![Greenkeeper badge](https://badges.greenkeeper.io/semantic-release/gitlab-config.svg)](https://greenkeeper.io/)
-
-[![npm latest version](https://img.shields.io/npm/v/@semantic-release/gitlab-config/latest.svg)](https://www.npmjs.com/package/@semantic-release/gitlab-config)
+[![Build Status](https://github.com/semantic-release/gitlab-config/workflows/Test/badge.svg)](https://github.com/semantic-release/gitlab-config/actions?query=workflow%3ATest+branch%3Amaster) [![npm latest version](https://img.shields.io/npm/v/@semantic-release/gitlab-config/latest.svg)](https://www.npmjs.com/package/@semantic-release/gitlab-config)
 [![npm next version](https://img.shields.io/npm/v/@semantic-release/gitlab-config/next.svg)](https://www.npmjs.com/package/@semantic-release/gitlab-config)
 
 ## Plugins
 
 This shareable configuration use the following plugins:
+
 - [`@semantic-release/commit-analyzer`](https://github.com/semantic-release/commit-analyzer)
 - [`@semantic-release/release-notes-generator`](https://github.com/semantic-release/release-notes-generator)
 - [`@semantic-release/npm`](https://github.com/semantic-release/npm)
