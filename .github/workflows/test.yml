@@ -1,0 +1,21 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - master
+      - renovate/**
+
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - uses: bahmutov/npm-install@v1
+      - run: npm test
