@@ -1,16 +1,13 @@
 name: Test
-
-on:
+"on":
   push:
     branches:
       - master
       - renovate/**
-
   pull_request:
     types:
       - opened
       - synchronize
-
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -19,5 +16,6 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           cache: npm
+          node-version: 16
       - run: npm ci
       - run: npm test
