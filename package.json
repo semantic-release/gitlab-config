@@ -13,15 +13,15 @@
   "dependencies": {
     "@semantic-release/commit-analyzer": "^9.0.1",
     "@semantic-release/gitlab": "^7.0.4",
-    "@semantic-release/npm": "^8.0.3",
+    "@semantic-release/npm": "^9.0.0",
     "@semantic-release/release-notes-generator": "^10.0.2"
   },
   "devDependencies": {
-    "semantic-release": "18.0.1",
+    "semantic-release": "19.0.2",
     "xo": "0.38.1"
   },
   "engines": {
-    "node": ">=14.17"
+    "node": "^14.17 || >=16"
   },
   "files": [
     "index.js"
