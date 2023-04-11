@@ -12,16 +12,16 @@
   ],
   "dependencies": {
     "@semantic-release/commit-analyzer": "^9.0.1",
-    "@semantic-release/gitlab": "^9.0.0",
+    "@semantic-release/gitlab": "^11.0.0",
     "@semantic-release/npm": "^9.0.0",
     "@semantic-release/release-notes-generator": "^10.0.2"
   },
   "devDependencies": {
-    "semantic-release": "19.0.5",
-    "xo": "0.39.1"
+    "semantic-release": "20.1.0",
+    "prettier": "^2.8.2"
   },
   "engines": {
-    "node": "^14.17 || >=16"
+    "node": ">=18"
   },
   "files": [
     "index.js"
@@ -38,7 +38,7 @@
   "license": "MIT",
   "main": "index.js",
   "peerDependencies": {
-    "semantic-release": ">=18.0.0"
+    "semantic-release": ">=20.1.0"
   },
   "prettier": {
     "printWidth": 120,
@@ -53,15 +53,8 @@
   },
   "scripts": {
     "semantic-release": "semantic-release",
-    "test": "xo",
-    "lint": "xo"
-  },
-  "xo": {
-    "prettier": true,
-    "space": true,
-    "rules": {
-      "unicorn/string-content": "off"
-    }
+    "lint": "prettier --check \"*.{js,json,md}\" \".github/**/*.{md,yml}\"",
+    "lint:fix": "prettier --write \"*.{js,json,md}\" \".github/**/*.{md,yml}\""
   },
   "renovate": {
     "extends": [
