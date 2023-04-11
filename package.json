@@ -3,7 +3,6 @@
   "description": "semantic-release shareable config to publish npm packages with GitLab",
   "version": "0.0.0-development",
   "author": "Pierre Vanduynslager (https://github.com/pvdlg)",
-  "type": "module",
   "bugs": {
     "url": "https://github.com/semantic-release/gitlab-config/issues"
   },
