@@ -54,8 +54,8 @@
   },
   "scripts": {
     "semantic-release": "semantic-release",
-    "lint": "prettier --check \"*.{js,json,md}\" \".github/**/*.{md,yml}\"",
-    "lint:fix": "prettier --write \"*.{js,json,md}\" \".github/**/*.{md,yml}\""
+    "lint": "prettier --check \"*.{js,json,md}\" \".github/**/*.yml\"",
+    "lint:fix": "prettier --write \"*.{js,json,md}\" \".github/**/*.yml\""
   },
   "renovate": {
     "extends": [
