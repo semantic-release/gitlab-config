@@ -17,8 +17,8 @@
     "@semantic-release/release-notes-generator": "^10.0.2"
   },
   "devDependencies": {
-    "semantic-release": "19.0.5",
-    "xo": "0.39.1"
+    "semantic-release": "20.0.1",
+    "xo": "0.54.0"
   },
   "engines": {
     "node": "^14.17 || >=16"
