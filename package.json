@@ -17,7 +17,7 @@
     "@semantic-release/release-notes-generator": "^12.0.0"
   },
   "devDependencies": {
-    "semantic-release": "22.0.9",
+    "semantic-release": "22.0.10",
     "prettier": "3.1.0"
   },
   "engines": {
