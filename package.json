@@ -12,7 +12,7 @@
   ],
   "dependencies": {
     "@semantic-release/commit-analyzer": "^11.0.0",
-    "@semantic-release/gitlab": "^12.0.0",
+    "@semantic-release/gitlab": "^13.0.0",
     "@semantic-release/npm": "^11.0.0",
     "@semantic-release/release-notes-generator": "^12.0.0"
   },
@@ -21,7 +21,7 @@
     "prettier": "3.1.1"
   },
   "engines": {
-    "node": "^18.17 || >=20.6.1"
+    "node": ">=20.8.1"
   },
   "files": [
     "index.js"
