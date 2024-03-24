@@ -11,10 +11,10 @@
     "Gregor Martynus (https://twitter.com/gr2m)"
   ],
   "dependencies": {
-    "@semantic-release/commit-analyzer": "^11.0.0",
+    "@semantic-release/commit-analyzer": "^12.0.0",
     "@semantic-release/gitlab": "^13.0.0",
-    "@semantic-release/npm": "^11.0.0",
-    "@semantic-release/release-notes-generator": "^12.0.0"
+    "@semantic-release/npm": "^12.0.0",
+    "@semantic-release/release-notes-generator": "^13.0.0"
   },
   "devDependencies": {
     "semantic-release": "23.0.5",
