@@ -11,13 +11,13 @@
     "Gregor Martynus (https://twitter.com/gr2m)"
   ],
   "dependencies": {
-    "@semantic-release/commit-analyzer": "^12.0.0",
+    "@semantic-release/commit-analyzer": "^13.0.0",
     "@semantic-release/gitlab": "^13.0.0",
     "@semantic-release/npm": "^12.0.0",
-    "@semantic-release/release-notes-generator": "^13.0.0"
+    "@semantic-release/release-notes-generator": "^14.0.0"
   },
   "devDependencies": {
-    "semantic-release": "23.1.1",
+    "semantic-release": "24.0.0",
     "prettier": "3.3.2"
   },
   "engines": {
@@ -38,7 +38,7 @@
   "license": "MIT",
   "main": "index.js",
   "peerDependencies": {
-    "semantic-release": ">=20.1.0"
+    "semantic-release": ">=24.0.0"
   },
   "prettier": {
     "printWidth": 120,
