@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "semantic-release": "23.1.1",
-    "prettier": "3.4.2"
+    "prettier": "3.5.0"
   },
   "engines": {
     "node": ">=20.8.1"
