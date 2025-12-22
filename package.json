@@ -13,11 +13,11 @@
   "dependencies": {
     "@semantic-release/commit-analyzer": "^12.0.0",
     "@semantic-release/gitlab": "^13.0.0",
-    "@semantic-release/npm": "^12.0.0",
+    "@semantic-release/npm": "^13.1.3",
     "@semantic-release/release-notes-generator": "^13.0.0"
   },
   "devDependencies": {
-    "semantic-release": "23.1.1",
+    "semantic-release": "25.0.2",
     "prettier": "3.7.4"
   },
   "engines": {
