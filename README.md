@@ -3,7 +3,7 @@
 [**semantic-release**](https://github.com/semantic-release/semantic-release) shareable config to publish npm packages with [GitLab](https://gitlab.com).
 
 [![Build Status](https://github.com/semantic-release/gitlab-config/workflows/Test/badge.svg)](https://github.com/semantic-release/gitlab-config/actions?query=workflow%3ATest+branch%3Amaster) [![npm latest version](https://img.shields.io/npm/v/@semantic-release/gitlab-config/latest.svg)](https://www.npmjs.com/package/@semantic-release/gitlab-config)
-[![npm next version](https://img.shields.io/npm/v/@semantic-release/gitlab-config/next.svg)](https://www.npmjs.com/package/@semantic-release/gitlab-config)
+[![npm beta version](https://img.shields.io/npm/v/@semantic-release/gitlab-config/beta.svg)](https://www.npmjs.com/package/@semantic-release/gitlab-config)
 
 ## Plugins
 
