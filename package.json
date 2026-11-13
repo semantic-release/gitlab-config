@@ -21,7 +21,7 @@
     "prettier": "3.7.4"
   },
   "engines": {
-    "node": "^22.22.2 || >=24.15"
+    "node": ">=26.13"
   },
   "files": [
     "index.js"
