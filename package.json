@@ -18,10 +18,10 @@
   },
   "devDependencies": {
     "semantic-release": "23.1.1",
-    "prettier": "3.7.4"
+    "prettier": "3.10.1"
   },
   "engines": {
-    "node": ">=20.8.1"
+    "node": ">=26.13"
   },
   "files": [
     "index.js"
