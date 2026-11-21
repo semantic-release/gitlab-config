@@ -22,7 +22,7 @@ $ npm install --save-dev semantic-release @semantic-release/gitlab-config
 
 ## Usage
 
-The shareable config can be configured in the [**semantic-release** configuration file](https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#configuration):
+The shareable config can be configured in the [**semantic-release** configuration file](https://semantic-release.org/usage/configuration#configuration-file):
 
 ```json
 {
